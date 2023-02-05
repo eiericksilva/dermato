@@ -13,7 +13,7 @@ const Questions = () => {
     <ContainerSection>
       <ContainerLeft>
         <Question
-          question="Como se preparar para a consulta"
+          question="Como se preparar para a consulta?"
           answer="Anote todas as suas dúvidas caso esqueça na hora da consulta. Deixe as unhas livres de esmaltes e o rosto limpo, sem maquiagem para não interferir na análise. "
         />
         <Question
@@ -21,7 +21,7 @@ const Questions = () => {
           answer="Geralmente, o ideal é que as consultas dermatológicas sejam realizadas a cada 6 meses. Assim, as chances de diagnosticar os problemas de saúde ainda em sua forma inicial são maiores."
         />
         <Question
-          question="Preciso de encaminhamento para consulta"
+          question="Preciso de encaminhamento para consulta?"
           answer="Para marcar uma consulta com um dermatologista pelo SUS, você deve se dirigir a uma unidade de saúde com seu Cartão Nacional de Saúde e solicitar o agendamento da consulta."
         />
         <Question
