@@ -4,17 +4,20 @@ import Services from "./components/Services/Services.component";
 import Section from "./components/Section/Section.component";
 import Questions from "./components/Questions/Questions.component";
 import ContainerComentarios from "./components/ContainerComentarios/ContainerComentarios.component";
-import CardComentario from "./components/CardComentario/CardComentario.component";
+import Footer from "./components/Footer/Footer.component";
+import Numbers from "./components/Numbers/Numbers.component";
 
 const App = () => {
   return (
     <div className="App">
       <Navbar />
       <Header />
+      <Numbers />
       <Services />
       <Section />
       <Questions />
       <ContainerComentarios />
+      <Footer />
     </div>
   );
 };
