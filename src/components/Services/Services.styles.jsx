@@ -4,7 +4,11 @@ export const ServicesContainer = styled.div`
   background-color: #e4d0b4;
   height: 880px;
   padding-top: 175px;
-  padding-left: 139px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h1 {
     font-size: 36px;

@@ -11,7 +11,9 @@ import Microagulhamento from "../../assets/Vector6.png";
 const Services = ({ image, title, description }) => {
   return (
     <ServicesContainer>
-      <h1>Tratamentos estéticos</h1>
+      <div>
+        <h1>Tratamentos estéticos</h1>
+      </div>
       <ContainerCards>
         <Card
           image={Limpeza}
