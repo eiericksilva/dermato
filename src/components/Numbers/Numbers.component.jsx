@@ -3,7 +3,7 @@ import { Column, NumbersContainer } from "./Numbers.styles";
 
 const Numbers = () => {
   return (
-    <NumbersContainer>
+    <NumbersContainer id="sobre">
       <Column>
         <h2>+3.000</h2>
         <p>Clientes satisfeitas</p>
@@ -16,7 +16,7 @@ const Numbers = () => {
       <hr />
       <Column>
         <h2>+10</h2>
-        <p>Anos de experiência</p>
+        <p>Filiais</p>
       </Column>
     </NumbersContainer>
   );

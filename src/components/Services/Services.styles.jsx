@@ -10,13 +10,15 @@ export const ServicesContainer = styled.div`
   justify-content: center;
   align-items: center;
 
+  position: relative;
+
   h1 {
     font-size: 36px;
     font-weight: 700;
     text-align: center;
 
     color: #dc2428;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
 `;
 

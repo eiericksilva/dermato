@@ -8,7 +8,7 @@ import Button from "../Button/Button.component";
 
 const Header = () => {
   return (
-    <HeaderContainer>
+    <HeaderContainer id="inicio">
       <ContainerLeft>
         <h1>A sua beleza é única, o tratamento também</h1>
         <p>

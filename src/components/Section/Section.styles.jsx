@@ -41,7 +41,6 @@ export const ContainerRight = styled.div`
     font-size: 20px;
     font-weight: 400;
     line-height: 26px;
-    width: 624px;
   }
 `;
 

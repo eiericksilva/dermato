@@ -14,6 +14,7 @@ export const ContainerImage = styled.div`
   height: 470px;
   background-color: #ffccd1;
   position: relative;
+  margin: 0 auto;
 
   img {
     width: 371px;
@@ -25,7 +26,7 @@ export const ContainerImage = styled.div`
 `;
 export const ContainerRight = styled.div`
   width: 50%;
-  padding: 80px;
+  padding: 80px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;

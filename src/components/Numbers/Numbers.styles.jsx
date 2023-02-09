@@ -3,18 +3,17 @@ import styled from "styled-components";
 export const NumbersContainer = styled.div`
   width: 1162px;
   height: 206px;
-
   padding: 72px 132px;
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 
   position: absolute;
-  top: 613px;
-  left: 139px;
+
+  top: -56px;
 
   hr {
     border: 1px solid #7e623caa;

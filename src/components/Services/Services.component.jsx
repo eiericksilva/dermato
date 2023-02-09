@@ -7,10 +7,12 @@ import Radiesse from "../../assets/Vector3.png";
 import LiftingNaoInvasivo from "../../assets/Vector4.png";
 import DrenagemLinfatica from "../../assets/Vector5.png";
 import Microagulhamento from "../../assets/Vector6.png";
+import Numbers from "../Numbers/Numbers.component";
 
 const Services = ({ image, title, description }) => {
   return (
-    <ServicesContainer>
+    <ServicesContainer id="servicos">
+      <Numbers />
       <div>
         <h1>Tratamentos estéticos</h1>
       </div>

@@ -5,7 +5,6 @@ import iconRight from "../../assets/iconRight.png";
 import Picture from "../../assets/picture.png";
 import Picture2 from "../../assets/picture2.png";
 import CardComentario from "../CardComentario/CardComentario.component";
-import slider from "../../assets/slider.png";
 const ContainerComentarios = () => {
   return (
     <Container>
