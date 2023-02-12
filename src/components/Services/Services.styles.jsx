@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const ServicesContainer = styled.div`
   background-color: #e4d0b4;
-  height: 880px;
+  min-height: 880px;
+  width: 100%;
   padding-top: 175px;
 
   display: flex;
@@ -12,7 +13,7 @@ export const ServicesContainer = styled.div`
 
   position: relative;
 
-  h1 {
+  h2 {
     font-size: 36px;
     font-weight: 700;
     text-align: center;
@@ -20,12 +21,15 @@ export const ServicesContainer = styled.div`
     color: #dc2428;
     margin-bottom: 60px;
   }
+
+  @media (max-width: 768px) {
+    padding-top: 90px;
+  }
 `;
 
 export const ContainerCards = styled.div`
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  width: 1163px;
-  height: 491px;
+  width: 80%;
+  min-height: 491px;
 `;

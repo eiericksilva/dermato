@@ -34,7 +34,7 @@ const Questions = () => {
         />
       </ContainerLeft>
       <ContainerRight>
-        <ContainerImage>
+        <ContainerImage id="ContainerImage">
           <img
             src={ImagemProduto}
             alt="Foto de um produto com um coco to lado"

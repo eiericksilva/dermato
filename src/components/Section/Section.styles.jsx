@@ -1,13 +1,25 @@
 import styled from "styled-components";
 
 export const ContainerSection = styled.div`
-  background-color: #ffffff;
   display: flex;
   background-color: #fcf8f5;
+
+  @media (max-width: 1060px) {
+    margin: 30px 0;
+  }
 `;
 
 export const ContainerLeft = styled.div`
-  margin: 80px 198px;
+  margin: 80px 130px;
+
+  @media (max-width: 1024px) {
+    margin: 10px;
+    margin-left: 80px;
+
+    img {
+      margin: auto;
+    }
+  }
 `;
 export const ContainerImage = styled.div`
   width: 340px;
@@ -16,8 +28,7 @@ export const ContainerImage = styled.div`
   position: relative;
 
   img {
-    width: 340px;
-    height: 550px;
+    object-fit: contain;
     position: absolute;
     right: 59px;
     top: 48px;
@@ -30,7 +41,12 @@ export const ContainerRight = styled.div`
   flex-direction: column;
   gap: 20px;
 
-  h1 {
+  @media (max-width: 1060px) {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h2 {
     color: #dc2428;
     font-size: 36px;
     font-weight: 700;

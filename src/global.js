@@ -18,8 +18,25 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'DM Sans', sans-serif;
         margin: 0;
-        overflow-x: hidden;
-        background-color: blue;
+    }
+
+    h1 {
+        color: #dc2428;
+        font-weight: 700;
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #dc2428;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 400;
+        color: #2e2e2e;
     }
 
     a {

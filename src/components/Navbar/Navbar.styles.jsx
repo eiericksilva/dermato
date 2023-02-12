@@ -8,11 +8,20 @@ export const NavbarContainer = styled.div`
 
   padding: 48px 140px;
 
+  svg {
+    display: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 950px) {
+    svg {
+      display: block;
+    }
+  }
+
   h1 {
-    text-transform: uppercase;
     font-size: 1.2em;
     color: #644b2c;
-    font-weight: 700;
   }
 `;
 
@@ -21,6 +30,10 @@ export const NavLinks = styled.ul`
   text-decoration: none;
   display: flex;
   color: #644b2c;
+
+  @media (max-width: 950px) {
+    display: none;
+  }
 
   li {
     text-transform: capitalize;

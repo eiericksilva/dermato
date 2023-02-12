@@ -5,6 +5,17 @@ export const HeaderContainer = styled.div`
   display: flex;
   padding: 48px 140px;
   align-items: center;
+
+  @media (max-width: 950px) {
+    padding: 20px;
+    background-color: blue;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 30px;
+  }
 `;
 
 export const ContainerLeft = styled.div`
@@ -15,25 +26,21 @@ export const ContainerLeft = styled.div`
   gap: 20px;
 
   h1 {
-    color: #dc2428;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 62px;
-  }
-  p {
-    font-size: 20px;
-    font-weight: 400;
-    color: #2e2e2e;
+    font-size: max(3vw);
   }
 `;
 export const ContainerRight = styled.div`
-  width: 60%;
-  background-color: transparent;
-  padding-left: 60px;
+  width: 65%;
+  margin-left: 60px;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 
   div {
     img {
-      width: 617px;
+      width: 100%;
+      object-fit: contain;
     }
   }
 `;

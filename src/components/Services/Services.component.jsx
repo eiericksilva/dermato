@@ -14,7 +14,7 @@ const Services = ({ image, title, description }) => {
     <ServicesContainer id="servicos">
       <Numbers />
       <div>
-        <h1>Tratamentos estéticos</h1>
+        <h2>Tratamentos estéticos</h2>
       </div>
       <ContainerCards>
         <Card

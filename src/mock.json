@@ -1,0 +1,87 @@
+{
+    "services": [
+        {
+            "img": {
+                "url":"",
+                "alt":"Vetor de Limpeza de Pele"
+            },
+            "title": "Limpeza de Pele",
+            "description": "Promove a renovação celular, de forma progressiva, estimulando a regeneração natural dos tecidos."
+        },
+        {
+            "img": {
+                "url":"",
+                "alt":"Vetor de Peeling"
+            },
+            "title":"Peeling",
+            "description":"Promove a renovação celular, de forma progressiva, estimulando a regeneração natural dos tecidos."
+        },
+        {
+            "img": {
+                "url":"",
+                "alt":"Vetor de Radiesse"
+            },
+            "title":"Radiesse",
+            "description":"Proporciona uma correção imediata de efeitos comuns do envelhecimento, como flacidez e perda de sustentação da pele."
+        },
+        {
+            "img": {
+                "url":"",
+                "alt":"Vetor de Lifting Não Invasivo"
+            },
+            "title":"Lifting Não Invasivo",
+            "description":"Tratamento que devolve o tônus à pele e amenizar sinais de envelhecimento sem demandar internação hospitalar."
+        },
+        {
+            "img": {
+                "url":"",
+                "alt":"Vetor de Drenagem Linfática"
+            },
+            "title":"Drenagem Linfática",
+            "description":"Ajuda na eliminação de toxinas, melhora o sistema imunológico, melhora a aparência de celulite."
+        },
+        {
+            "img": {
+                "url":"",
+                "alt":"Vetor de Microagulhamento"
+            },
+            "title":"Microagulhamento",
+            "description":"Indicado para remover cicatrizes de acne, amenizar estrias, eliminar rugas, diminuir a flacidez da pele e prevenir a queda de cabelo."
+        }
+    ],
+    "comments": [
+        {
+            "image":{
+                "url":"https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                "alt":"Foto da Débora Souza"
+            },
+            "name":"Débora Souza",
+            "comment":"Really good quality, lovely packaging & delivery. Love it!"
+        },
+
+        {
+            "image":{
+                "url":"https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80",
+                "alt":"Foto da Daiene Rodrigues"
+            },
+            "name":"Daiene Rodrigues",
+            "comment":"Really good quality, lovely packaging & delivery. Love it!"
+        },
+        {
+            "image":{
+                "url":"https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                "alt":"Foto da Raiane Candido"
+            },
+            "name":"Raiane Candido",
+            "comment":"Really good quality, lovely packaging & delivery. Love it!"
+        },
+        {
+            "image":{
+                "url":"https://images.unsplash.com/photo-1618085222100-93f0eecad0aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                "alt":"Foto da Maria de Lourdes"
+            },
+            "name":"Maria de Lourdes",
+            "comment":"Really good quality, lovely packaging & delivery. Love it!"
+        }
+    ]
+}

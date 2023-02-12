@@ -1,32 +1,46 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #e4d0b4;
-  height: 650px;
   display: flex;
   flex-direction: column;
+  background-color: #e4d0b4;
+  align-items: center;
+  max-width: 100%;
+
+  h2 {
+    margin-top: 20px;
+  }
+`;
+export const ContainerSlider = styled.div`
+  display: flex;
+  background-color: #e4d0b4;
+  min-height: 400px;
+  padding: 30px;
   justify-content: center;
   align-items: center;
 
-  h1 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #dc2428;
-    padding: 80px;
+  button {
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 
 export const SlideComentarios = styled.div`
   display: flex;
+  min-width: 80%;
+  max-width: 100%;
   justify-content: space-around;
 
-  button {
-    background-color: transparent;
-    border: none;
-    padding: 20px;
+  @media (max-width: 1015px) {
+    flex-direction: column;
+    min-width: auto;
 
-    &:hover {
-      cursor: pointer;
+    button {
+      display: none;
     }
   }
 `;

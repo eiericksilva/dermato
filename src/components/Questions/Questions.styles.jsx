@@ -3,31 +3,45 @@ import styled from "styled-components";
 export const ContainerSection = styled.div`
   background-color: #ffffff;
   display: flex;
-  height: 682px;
+  min-height: 682px;
+
+  @media (max-width: 1195px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const ContainerLeft = styled.div`
   margin: 80px;
+  min-width: 50%;
+  min-height: 80%;
+  height: auto;
+  @media (max-width: 1195px) {
+    margin: 0 auto;
+    padding: 10px;
+  }
 `;
+export const ContainerRight = styled.div`
+  width: auto;
+  margin: 80px 0 0 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1195px) {
+    display: none;
+  }
+`;
+
 export const ContainerImage = styled.div`
   width: 371px;
   height: 470px;
   background-color: #ffccd1;
   position: relative;
-  margin: 0 auto;
 
   img {
-    width: 371px;
-    height: 470px;
+    object-fit: contain;
     position: absolute;
     right: 59px;
     top: 48px;
   }
-`;
-export const ContainerRight = styled.div`
-  width: 50%;
-  padding: 80px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 `;

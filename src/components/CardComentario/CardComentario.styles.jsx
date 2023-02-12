@@ -10,9 +10,21 @@ export const WrapperComentario = styled.div`
   gap: 20px;
   margin: 50px;
   padding: 35px;
+
+  @media (max-width: 1190px) {
+    margin: 5px;
+  }
 `;
 
-export const Left = styled.div``;
+export const Left = styled.div`
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 175px;
+    border-radius: 50px;
+  }
+`;
 
 export const Right = styled.div`
   display: flex;
@@ -20,8 +32,7 @@ export const Right = styled.div`
   gap: 10px;
 
   h1 {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 1.2rem;
     color: #000000;
     padding: 0;
   }

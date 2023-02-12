@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const NumbersContainer = styled.div`
-  width: 1162px;
+  max-width: 1162px;
+  width: 80%;
   height: 206px;
   padding: 72px 132px;
   border-radius: 5px;
@@ -19,6 +20,24 @@ export const NumbersContainer = styled.div`
     border: 1px solid #7e623caa;
     height: 72px;
   }
+
+  @media (max-width: 950px) {
+    padding: 0;
+    top: -30px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    width: 70%;
+    gap: 30px;
+    top: -10px;
+    left: auto;
+
+    hr {
+      display: none;
+    }
+  }
 `;
 
 export const Column = styled.div`
@@ -27,13 +46,7 @@ export const Column = styled.div`
   align-items: center;
 
   h2 {
-    font-size: 52px;
-    font-weight: 700;
-  }
-
-  p {
-    font-size: 20px;
-    font-weight: 400;
-    color: #2e2e2e;
+    font-size: 3.25rem;
+    margin-bottom: 0;
   }
 `;
