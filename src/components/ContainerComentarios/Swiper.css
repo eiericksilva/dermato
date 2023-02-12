@@ -1,0 +1,16 @@
+.swiper {
+    width: 90%;
+}
+
+.swiper-button-prev {
+    --swiper-navigation-color: red;
+}
+
+.swiper-button-next {
+    --swiper-navigation-color: red;
+}
+
+.swiper-pagination {
+    --swiper-pagination-color: red;
+    --swiper-pagination-bullet-size: 8px;
+}

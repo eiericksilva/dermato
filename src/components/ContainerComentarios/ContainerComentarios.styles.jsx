@@ -1,11 +1,18 @@
 import styled from "styled-components";
 
+export const All = styled.div`
+  background-color: #ffccd1;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin: 10px auto;
+  }
+`;
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #e4d0b4;
+  background-color: #ffccd1;
   align-items: center;
-  max-width: 100%;
 
   h2 {
     margin-top: 20px;

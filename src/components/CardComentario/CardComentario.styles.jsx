@@ -45,4 +45,8 @@ export const Right = styled.div`
     font-weight: 400;
     color: #2e2e2e;
   }
+
+  img {
+    width: 150px;
+  }
 `;
