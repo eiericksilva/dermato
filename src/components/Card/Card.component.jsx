@@ -1,11 +1,11 @@
 import React from "react";
 import { CardContainer, Header, Bottom } from "./Card.styles";
-import { Zoom } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const Card = ({ image, title, description }) => {
   return (
     <CardContainer>
-      <Zoom>
+      <Fade>
         <Header>
           <img src={image} alt="" />
           <h1 id="title">{title}</h1>
@@ -13,7 +13,7 @@ const Card = ({ image, title, description }) => {
         <Bottom>
           <p>{description}</p>
         </Bottom>
-      </Zoom>
+      </Fade>
     </CardContainer>
   );
 };

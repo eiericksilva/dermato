@@ -8,13 +8,13 @@ import {
   ContainerSection,
 } from "../Questions/Questions.styles";
 
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const Questions = () => {
   return (
     <ContainerSection>
-      <Fade left cascade>
-        <ContainerLeft>
+      <ContainerLeft>
+        <Fade cascade duration="400">
           <Question
             question="Como se preparar para a consulta?"
             answer="Anote todas as suas dúvidas caso esqueça na hora da consulta. Deixe as unhas livres de esmaltes e o rosto limpo, sem maquiagem para não interferir na análise. "
@@ -35,16 +35,18 @@ const Questions = () => {
             question="O que devo esperar de uma análise de pele?"
             answer="Detectar precocemente o câncer de pele, tanto o melanoma quanto o não-melanoma. Se diagnosticado e tratado enquanto o tumor ainda não invadiu profundamente a pele, o câncer de pele pode ser curado."
           />
-        </ContainerLeft>
+        </Fade>
+      </ContainerLeft>
+      <Fade direction="right">
+        <ContainerRight>
+          <ContainerImage id="ContainerImage">
+            <img
+              src={ImagemProduto}
+              alt="Foto de um produto com um coco to lado"
+            />
+          </ContainerImage>
+        </ContainerRight>
       </Fade>
-      <ContainerRight>
-        <ContainerImage id="ContainerImage">
-          <img
-            src={ImagemProduto}
-            alt="Foto de um produto com um coco to lado"
-          />
-        </ContainerImage>
-      </ContainerRight>
     </ContainerSection>
   );
 };

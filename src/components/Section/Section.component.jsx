@@ -9,12 +9,12 @@ import {
   Navbar,
 } from "./Section.styles";
 
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const SectionContainer = () => {
   return (
     <ContainerSection>
-      <Fade left>
+      <Fade direction="left">
         <ContainerLeft>
           <ContainerImage>
             <img
@@ -24,7 +24,7 @@ const SectionContainer = () => {
           </ContainerImage>
         </ContainerLeft>
       </Fade>
-      <Fade right>
+      <Fade direction="right" delay={200}>
         <ContainerRight>
           <h2 id="sobre">Tratamentos dermatológicos</h2>
           <p>

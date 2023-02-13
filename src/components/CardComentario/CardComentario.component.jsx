@@ -1,10 +1,10 @@
 import React from "react";
 import { Left, Right, WrapperComentario } from "./CardComentario.styles";
 import stars from "../../assets/Group.png";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 const CardComentario = ({ image, name, comment }) => {
   return (
-    <Fade bottom>
+    <Fade>
       <WrapperComentario>
         <Left>
           <img src={image} alt="" />
