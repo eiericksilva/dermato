@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.div`
   background-color: #644b2c;
-  height: 483px;
+  min-height: 483px;
+  height: auto;
   display: flex;
   padding: 80px 140px;
   justify-content: space-around;
@@ -39,19 +40,39 @@ export const Left = styled.div`
   width: 360px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+
+  @media (max-width: 1015px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 `;
 export const Middle = styled.div`
   width: 360px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  @media (max-width: 1015px) {
+    margin-bottom: 30px;
+  }
 `;
 export const Right = styled.div`
   width: 360px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+`;
+
+export const Direitos = styled.div`
+  background-color: #644b2c;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  p {
+    color: #fff;
+    font-size: 16px;
+  }
 `;
 
 export const ContainerIcons = styled.div`
