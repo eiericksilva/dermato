@@ -16,6 +16,7 @@ export const ContainerLeft = styled.div`
   min-width: 50%;
   min-height: 80%;
   height: auto;
+  max-width: 100%;
   @media (max-width: 1195px) {
     margin: 0 auto;
     padding: 10px;

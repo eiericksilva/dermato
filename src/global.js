@@ -5,7 +5,6 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-       /*  border: 1px solid red; */
     }
 
     html {
@@ -18,6 +17,8 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'DM Sans', sans-serif;
         margin: 0;
+        max-width: 1730px;
+        margin: 0 auto;
     }
 
     h1 {

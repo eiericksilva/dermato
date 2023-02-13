@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CardQuestion = styled.div`
   width: 660px;
+  max-width: 100%;
   min-height: 50px;
   background-color: #ffffff;
   display: flex;
@@ -9,11 +10,16 @@ export const CardQuestion = styled.div`
   border: 1px solid #b2b2b2;
   padding: 20px 30px;
   margin-bottom: 20px;
+
+  @media (max-width: 700px) {
+    width: 90%;
+  }
 `;
 
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  max-width: 100%;
 
   h2 {
     font-size: 20px;
@@ -36,5 +42,6 @@ export const Header = styled.div`
 `;
 export const Bottom = styled.span`
   width: 510px;
+  max-width: 100%;
   padding-top: 20px;
 `;

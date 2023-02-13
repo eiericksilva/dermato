@@ -8,10 +8,9 @@ export const HeaderContainer = styled.div`
 
   @media (max-width: 950px) {
     padding: 20px;
-    background-color: blue;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 770px) {
     flex-direction: column;
     align-items: flex-start;
     padding: 0 30px;
@@ -28,13 +27,18 @@ export const ContainerLeft = styled.div`
   h1 {
     font-size: max(3vw);
   }
+
+  @media (max-width: 770px) {
+    width: 100%;
+  }
 `;
 export const ContainerRight = styled.div`
   width: 65%;
   margin-left: 60px;
 
   @media (max-width: 768px) {
-    margin-left: 0;
+    margin: auto;
+    margin-top: 30px;
   }
 
   div {

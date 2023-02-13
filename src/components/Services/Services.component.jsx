@@ -11,10 +11,10 @@ import Numbers from "../Numbers/Numbers.component";
 
 const Services = ({ image, title, description }) => {
   return (
-    <ServicesContainer id="servicos">
+    <ServicesContainer>
       <Numbers />
       <div>
-        <h2>Tratamentos estéticos</h2>
+        <h2 id="servicos">Tratamentos estéticos</h2>
       </div>
       <ContainerCards>
         <Card

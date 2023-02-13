@@ -21,7 +21,7 @@ const SectionContainer = () => {
         </ContainerImage>
       </ContainerLeft>
       <ContainerRight>
-        <h2>Tratamentos dermatológicos</h2>
+        <h2 id="sobre">Tratamentos dermatológicos</h2>
         <p>
           Há alguns anos, quando se falava em tecnologia, ela era associada
           apenas à engenharia e à ciência. Hoje a situação é diferente: nossas

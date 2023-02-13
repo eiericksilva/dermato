@@ -1,12 +1,11 @@
 import React from "react";
-/*  */
+
 import "./Swiper.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-/*  */
 import {
   All,
   Container,
@@ -30,7 +29,7 @@ const ContainerComentarios = () => {
               slidesPerView: 3,
               spaceBetween: 30,
             },
-            980: {
+            990: {
               slidesPerView: 2,
               spaceBetween: 30,
             },
@@ -40,7 +39,6 @@ const ContainerComentarios = () => {
             },
           }}
           modules={[Navigation, Pagination]}
-          loop="true"
           grabCursor="true"
           spaceBetween={30}
           slidesPerView={2}

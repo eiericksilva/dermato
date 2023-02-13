@@ -5,7 +5,8 @@ export const ContainerSection = styled.div`
   background-color: #fcf8f5;
 
   @media (max-width: 1060px) {
-    margin: 30px 0;
+    margin: 0;
+    padding-top: 30px;
   }
 `;
 
@@ -19,6 +20,11 @@ export const ContainerLeft = styled.div`
     img {
       margin: auto;
     }
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+    width: 100%;
   }
 `;
 export const ContainerImage = styled.div`

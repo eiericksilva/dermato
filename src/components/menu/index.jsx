@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HeaderMenuContainer } from "./header-menu.styles";
 
 const HeaderMenu = () => {
