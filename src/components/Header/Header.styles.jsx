@@ -26,6 +26,10 @@ export const ContainerLeft = styled.div`
 
   @media (max-width: 770px) {
     width: 100%;
+
+    h1 {
+      font-size: 2rem;
+    }
   }
 `;
 export const ContainerRight = styled.div`

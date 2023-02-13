@@ -14,6 +14,7 @@ export const NavbarContainer = styled.div`
   }
 
   @media (max-width: 950px) {
+    padding: 30px;
     svg {
       display: block;
     }

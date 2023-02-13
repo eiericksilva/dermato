@@ -12,7 +12,7 @@ export const CardQuestion = styled.div`
   margin-bottom: 20px;
 
   @media (max-width: 700px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 
