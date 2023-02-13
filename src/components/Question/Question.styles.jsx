@@ -14,6 +14,9 @@ export const CardQuestion = styled.div`
   @media (max-width: 700px) {
     width: 100%;
   }
+  @media (max-width: 1235px) {
+    width: 100%;
+  }
 `;
 
 export const Header = styled.div`

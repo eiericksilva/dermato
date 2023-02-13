@@ -17,9 +17,10 @@ export const ContainerLeft = styled.div`
   min-height: 80%;
   height: auto;
   max-width: 100%;
-  @media (max-width: 1195px) {
+  @media (max-width: 1235px) {
     margin: 0 auto;
     padding: 10px;
+    width: 100%;
   }
 `;
 export const ContainerRight = styled.div`
@@ -28,7 +29,7 @@ export const ContainerRight = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 1195px) {
+  @media (max-width: 1235px) {
     display: none;
   }
 `;

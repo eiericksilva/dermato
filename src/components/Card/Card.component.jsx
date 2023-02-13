@@ -1,16 +1,19 @@
 import React from "react";
 import { CardContainer, Header, Bottom } from "./Card.styles";
+import { Zoom } from "react-reveal";
 
 const Card = ({ image, title, description }) => {
   return (
     <CardContainer>
-      <Header>
-        <img src={image} alt="" />
-        <h1 id="title">{title}</h1>
-      </Header>
-      <Bottom>
-        <p>{description}</p>
-      </Bottom>
+      <Zoom>
+        <Header>
+          <img src={image} alt="" />
+          <h1 id="title">{title}</h1>
+        </Header>
+        <Bottom>
+          <p>{description}</p>
+        </Bottom>
+      </Zoom>
     </CardContainer>
   );
 };

@@ -41,7 +41,7 @@ export const ContainerImage = styled.div`
   }
 `;
 export const ContainerRight = styled.div`
-  width: 50%;
+  width: 100%;
   padding: 80px;
   display: flex;
   flex-direction: column;
