@@ -20,7 +20,7 @@ export const WrapperComentario = styled.div`
   }
   @media (max-width: 480px) {
     margin: 10px;
-    width: 300px;
+    width: auto;
   }
 `;
 
