@@ -50,6 +50,7 @@ export const ContainerRight = styled.div`
   @media (max-width: 1060px) {
     margin: 10px;
     padding: 10px;
+    width: 90%;
   }
 
   h2 {

@@ -18,6 +18,10 @@ export const WrapperComentario = styled.div`
   @media (max-width: 990px) {
     margin: 30px auto;
   }
+  @media (max-width: 480px) {
+    margin: 10px;
+    width: 300px;
+  }
 `;
 
 export const Left = styled.div`

@@ -4,8 +4,13 @@ export const All = styled.div`
   background-color: #ffccd1;
   display: flex;
   flex-direction: column;
+
   h2 {
     margin: 10px auto;
+
+    @media (max-width: 610px) {
+      font-size: 1.5rem;
+    }
   }
 `;
 export const Container = styled.div`

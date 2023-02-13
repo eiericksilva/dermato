@@ -24,10 +24,6 @@ export const ContainerLeft = styled.div`
   flex-direction: column;
   gap: 20px;
 
-  h1 {
-    font-size: max(3vw);
-  }
-
   @media (max-width: 770px) {
     width: 100%;
   }

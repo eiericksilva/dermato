@@ -3,7 +3,7 @@ import { GrMenu } from "react-icons/gr";
 import { NavbarContainer, NavLinks } from "./Navbar.styles";
 import MenuMobile from "../MenuMobile/MenuMobile";
 const Navbar = () => {
-  const [menuIsVisible, setMenuIsVisible] = useState(true);
+  const [menuIsVisible, setMenuIsVisible] = useState(false);
   return (
     <NavbarContainer>
       <MenuMobile

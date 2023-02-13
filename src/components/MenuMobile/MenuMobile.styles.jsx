@@ -23,8 +23,8 @@ export const Container = styled.div`
   svg {
     cursor: pointer;
     position: absolute;
-    top: 1.4rem;
-    right: 5.9rem;
+    top: 1rem;
+    right: 1rem;
   }
 
   nav {
@@ -46,4 +46,8 @@ export const Container = styled.div`
 export const Links = styled.nav`
   display: flex;
   flex-direction: column;
+
+  a {
+    font-size: 1.2rem;
+  }
 `;
