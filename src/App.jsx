@@ -5,6 +5,7 @@ import Section from "./components/Section/Section.component";
 import Questions from "./components/Questions/Questions.component";
 import ContainerComentarios from "./components/ContainerComentarios/ContainerComentarios.component";
 import Footer from "./components/Footer/Footer.component";
+import ScheduleModal from "./components/ScheduleModal/ScheduleModal";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Questions />
       <ContainerComentarios />
       <Footer />
+      <ScheduleModal />
     </div>
   );
 };

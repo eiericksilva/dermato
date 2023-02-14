@@ -6,7 +6,11 @@ import {
 import Destaque from "../../assets/destaque.png";
 import Button from "../Button/Button.component";
 
+import ScheduleContext from "../../Provider/ScheduleContext";
+import { useContext } from "react";
+
 const Header = () => {
+  const { openModal, setScheduleModalIsOpen } = useContext(ScheduleContext);
   return (
     <HeaderContainer id="inicio">
       <ContainerLeft>
@@ -16,7 +20,7 @@ const Header = () => {
           Por isso analisamos sua pele e realizamos apenas procedimentos
           personalizados para você.
         </p>
-        <Button>AGENDAR CONSULTA</Button>
+        <Button onClick={openModal}>AGENDAR CONSULTA</Button>
       </ContainerLeft>
       <ContainerRight>
         <div>

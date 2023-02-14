@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import ScheduleContext from "../../Provider/ScheduleContext";
 import Button from "../Button/Button.component";
 import ImageTratamento from "../../assets/tratamento.png";
 import {
@@ -12,6 +13,7 @@ import {
 import { Fade } from "react-awesome-reveal";
 
 const SectionContainer = () => {
+  const { openModal } = useContext(ScheduleContext);
   return (
     <ContainerSection>
       <Fade direction="left">
@@ -45,7 +47,7 @@ const SectionContainer = () => {
             da pele, cabelos e unhas, permitindo um diagnóstico e tratamento
             mais preciso.
           </p>
-          <Button>Agendar Consulta</Button>
+          <Button onClick={openModal}>Agendar Consulta</Button>
         </ContainerRight>
       </Fade>
     </ContainerSection>
