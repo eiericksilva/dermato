@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Container, Form } from "./ScheduleModal.styles";
 import ScheduleContext from "../../Provider/ScheduleContext";
 import { AiFillCloseCircle } from "react-icons/ai";
+
 const ScheduleModal = () => {
   const { ScheduleModalIsOpen, setScheduleModalIsOpen, closeModal } =
     useContext(ScheduleContext);
@@ -10,6 +11,7 @@ const ScheduleModal = () => {
   useEffect(() => {
     document.body.style.overflowY = ScheduleModalIsOpen ? "hidden" : "auto";
   }, [ScheduleModalIsOpen, setScheduleModalIsOpen]);
+
   return (
     <Container isVisible={ScheduleModalIsOpen}>
       <div className="Header">
