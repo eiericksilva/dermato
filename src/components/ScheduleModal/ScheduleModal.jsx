@@ -1,8 +1,31 @@
 import React, { useContext } from "react";
 import { useEffect } from "react";
-import { Container, Form } from "./ScheduleModal.styles";
+import { Container, ErrorMessage, Form } from "./ScheduleModal.styles";
 import ScheduleContext from "../../Provider/ScheduleContext";
 import { AiFillCloseCircle } from "react-icons/ai";
+
+import { useForm } from "react-hook-form";
+
+/* Validação */
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup
+  .object({
+    first_name: yup
+      .string("Não pode haver numeros")
+      .required("Primeiro nome é obrigatório"),
+    last_name: yup
+      .string("Não pode haver numeros")
+      .required("Sobrenome nome é obrigatório"),
+    email: yup
+      .string()
+      .email("Insira um email válido")
+      .required("Email é obrigatório"),
+    date: yup.string().required("Informe a data da consulta"),
+    time: yup.string().required("Horário da consulta é obrigatório"),
+  })
+  .required();
 
 const ScheduleModal = () => {
   const { ScheduleModalIsOpen, setScheduleModalIsOpen, closeModal } =
@@ -10,7 +33,20 @@ const ScheduleModal = () => {
 
   useEffect(() => {
     document.body.style.overflowY = ScheduleModalIsOpen ? "hidden" : "auto";
-  }, [ScheduleModalIsOpen, setScheduleModalIsOpen]);
+  }, [ScheduleModalIsOpen, setScheduleModalIsOpen, closeModal]);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = (ScheduleData) => {
+    alert(
+      `Olá, ${ScheduleData.first_name} sua consulta foi agendada com sucesso! Obrigado pela preferência.`
+    );
+  };
 
   return (
     <Container isVisible={ScheduleModalIsOpen}>
@@ -22,36 +58,60 @@ const ScheduleModal = () => {
       <span className="closeCircle">
         <AiFillCloseCircle size={35} color="#f9637c" onClick={closeModal} />
       </span>
-      <Form>
+
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <label>
           Nome:
-          <input type="text" placeholder="Nome próprio" />
-          <input type="text" placeholder="Sobrenome" />
+          <br />
+          <input
+            type="text"
+            placeholder="Nome próprio"
+            {...register("first_name", { required: true })}
+          />
+          {errors.first_name ? (
+            <ErrorMessage>{errors.first_name?.message}</ErrorMessage>
+          ) : null}
+          <br />
+          <input
+            type="text"
+            placeholder="Sobrenome"
+            {...register("last_name", { required: true })}
+          />
+          {errors.last_name ? (
+            <ErrorMessage>{errors.last_name?.message}</ErrorMessage>
+          ) : null}
         </label>
         <label>
           Email:
-          <input type="text" placeholder="Email" />
+          <br />
+          <input
+            type="text"
+            placeholder="Email"
+            {...register("email", { required: true })}
+          />
+          {errors.email ? (
+            <ErrorMessage>{errors.email?.message}</ErrorMessage>
+          ) : null}
         </label>
         <label>
           Data:
-          <input type="date" />
+          <br />
+          <input type="date" {...register("date", { required: true })} />
+          {errors.date ? (
+            <ErrorMessage>{errors.date?.message}</ErrorMessage>
+          ) : null}
         </label>
         <label>
           Horário da Consulta:
-          <input type="time" />
+          <br />
+          <input type="time" {...register("time", { required: true })} />
+          {errors.time ? (
+            <ErrorMessage>{errors.time?.message}</ErrorMessage>
+          ) : null}
         </label>
-        <fieldset>
-          <legend>Primeira Consulta?</legend>
-          <label>
-            Sim
-            <input type="radio" value="sim" name="primeira_consulta" />
-          </label>
-          <label>
-            Não
-            <input type="radio" value="nao" name="primeira_consulta" />
-          </label>
-        </fieldset>
-        <button type="submit">Enviar</button>
+        <button onClick={() => handleSubmit(onSubmit)()} type="submit">
+          Enviar
+        </button>
       </Form>
     </Container>
   );

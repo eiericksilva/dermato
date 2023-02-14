@@ -3,13 +3,13 @@ import styled, { css } from "styled-components";
 export const Container = styled.div`
   opacity: 0;
   pointer-events: none;
-  overflow-y: hidden;
+  overflow-y: scroll;
 
   position: absolute;
   top: 0;
   left: auto;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   padding: 30px;
 
@@ -43,6 +43,7 @@ export const Container = styled.div`
     css`
       opacity: 1;
       pointer-events: auto;
+      z-index: 10000;
     `}
 `;
 
@@ -51,7 +52,7 @@ export const Form = styled.form`
   flex-direction: column;
 
   label {
-    padding: 20px 0;
+    padding: 10px 0;
   }
 
   fieldset {
@@ -62,22 +63,24 @@ export const Form = styled.form`
   input[type="date"],
   input[type="time"] {
     border: 1px solid #f9637c;
-    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 25px;
     width: 30%;
     height: 30px;
-
     padding: 20px;
-  }
 
-  input[type="radio"] {
-    margin: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+
+    position: relative;
   }
 
   button {
-    border: none;
+    border: 1px solid #f9637c;
     width: 50%;
     height: 30px;
-    margin: 20px auto;
+    margin: 50px auto;
 
     &:hover {
       cursor: pointer;
@@ -86,4 +89,13 @@ export const Form = styled.form`
       transition: 0.3s;
     }
   }
+`;
+
+export const ErrorMessage = styled.span`
+  position: relative;
+  top: 33px;
+  right: 430px;
+
+  color: #ff0000;
+  font-size: 12px;
 `;
