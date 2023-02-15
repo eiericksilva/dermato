@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
-import { useEffect } from "react";
-import { Container, ErrorMessage, Form } from "./ScheduleModal.styles";
 import ScheduleContext from "../../Provider/ScheduleContext";
-import { AiFillCloseCircle } from "react-icons/ai";
+import ModalGeneric from "../ModalGeneric/ModalGeneric";
+import { Button, DialogActions, TextField } from "@mui/material";
 
 import { useForm } from "react-hook-form";
 
 /* Validação */
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { ErrorMessage } from "./ScheduleModal.styles";
+import { padding } from "@mui/system";
 
 const schema = yup
   .object({
@@ -28,12 +29,7 @@ const schema = yup
   .required();
 
 const ScheduleModal = () => {
-  const { ScheduleModalIsOpen, setScheduleModalIsOpen, closeModal } =
-    useContext(ScheduleContext);
-
-  useEffect(() => {
-    document.body.style.overflowY = ScheduleModalIsOpen ? "hidden" : "auto";
-  }, [ScheduleModalIsOpen, setScheduleModalIsOpen, closeModal]);
+  const { ScheduleModalIsOpen, closeModal } = useContext(ScheduleContext);
   const {
     register,
     handleSubmit,
@@ -43,77 +39,69 @@ const ScheduleModal = () => {
   });
 
   const onSubmit = (ScheduleData) => {
-    alert(
-      `Olá, ${ScheduleData.first_name} sua consulta foi agendada com sucesso! Obrigado pela preferência.`
-    );
+    console.log(ScheduleData);
   };
 
   return (
-    <Container isVisible={ScheduleModalIsOpen}>
-      <div className="Header">
-        <h2>AGENDAMENTO - DERMATO</h2>
-        <p>Preencha os campos para agendar</p>
-        <hr />
-      </div>
-      <span className="closeCircle">
-        <AiFillCloseCircle size={35} color="#f9637c" onClick={closeModal} />
-      </span>
-
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <label>
-          Nome:
-          <br />
-          <input
+    <ModalGeneric title="Agendar Consulta" isVisible={ScheduleModalIsOpen}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="first_name"
+            label="Nome"
             type="text"
-            placeholder="Nome próprio"
-            {...register("first_name", { required: true })}
+            fullWidth
+            variant="outlined"
+            {...register("first_name")}
           />
-          {errors.first_name ? (
-            <ErrorMessage>{errors.first_name?.message}</ErrorMessage>
-          ) : null}
-          <br />
-          <input
+          {errors.first_name ? <p>{errors.first_name?.message}</p> : null}
+          <TextField
+            margin="dense"
+            id="last_name"
+            label="Sobrenome"
             type="text"
-            placeholder="Sobrenome"
-            {...register("last_name", { required: true })}
+            fullWidth
+            variant="outlined"
+            {...register("last_name")}
           />
-          {errors.last_name ? (
-            <ErrorMessage>{errors.last_name?.message}</ErrorMessage>
-          ) : null}
-        </label>
-        <label>
-          Email:
-          <br />
-          <input
-            type="text"
-            placeholder="Email"
-            {...register("email", { required: true })}
+          {errors.last_name ? <p>{errors.last_name?.message}</p> : null}
+          <TextField
+            margin="dense"
+            id="email"
+            label="Email"
+            type="email"
+            fullWidth
+            variant="outlined"
+            {...register("email")}
           />
-          {errors.email ? (
-            <ErrorMessage>{errors.email?.message}</ErrorMessage>
-          ) : null}
-        </label>
-        <label>
-          Data:
-          <br />
-          <input type="date" {...register("date", { required: true })} />
-          {errors.date ? (
-            <ErrorMessage>{errors.date?.message}</ErrorMessage>
-          ) : null}
-        </label>
-        <label>
-          Horário da Consulta:
-          <br />
-          <input type="time" {...register("time", { required: true })} />
-          {errors.time ? (
-            <ErrorMessage>{errors.time?.message}</ErrorMessage>
-          ) : null}
-        </label>
-        <button onClick={() => handleSubmit(onSubmit)()} type="submit">
-          Enviar
-        </button>
-      </Form>
-    </Container>
+          {errors.email ? <p>{errors.email?.message}</p> : null}
+          <TextField
+            margin="dense"
+            id="date"
+            type="date"
+            fullWidth
+            variant="outlined"
+            {...register("date")}
+          />
+          {errors.date ? <p>{errors.date?.message}</p> : null}
+          <TextField
+            margin="dense"
+            id="time"
+            type="time"
+            fullWidth
+            variant="outlined"
+            {...register("time")}
+          />
+          {errors.time ? <p>{errors.time?.message}</p> : null}
+          <DialogActions>
+            <Button type="submit">Confirmar</Button>
+            <Button onClick={closeModal}>Cancelar</Button>
+          </DialogActions>
+        </div>
+      </form>
+    </ModalGeneric>
   );
 };
 

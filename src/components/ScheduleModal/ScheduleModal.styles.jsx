@@ -91,7 +91,7 @@ export const Form = styled.form`
   }
 `;
 
-export const ErrorMessage = styled.span`
+export const ErrorMessage = styled.p`
   position: relative;
   top: 33px;
   right: 430px;
