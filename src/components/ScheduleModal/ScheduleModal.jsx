@@ -39,7 +39,9 @@ const ScheduleModal = () => {
   });
 
   const onSubmit = (ScheduleData) => {
-    console.log(ScheduleData);
+    alert(
+      `Olá ${ScheduleData.first_name}, sua consulta foi agendada com sucesso!`
+    );
   };
 
   return (
@@ -56,7 +58,9 @@ const ScheduleModal = () => {
             variant="outlined"
             {...register("first_name")}
           />
-          {errors.first_name ? <p>{errors.first_name?.message}</p> : null}
+          {errors.first_name ? (
+            <p className="errorMessage">{errors.first_name?.message}</p>
+          ) : null}
           <TextField
             margin="dense"
             id="last_name"
@@ -66,7 +70,9 @@ const ScheduleModal = () => {
             variant="outlined"
             {...register("last_name")}
           />
-          {errors.last_name ? <p>{errors.last_name?.message}</p> : null}
+          {errors.last_name ? (
+            <p className="errorMessage">{errors.last_name?.message}</p>
+          ) : null}
           <TextField
             margin="dense"
             id="email"
@@ -76,7 +82,9 @@ const ScheduleModal = () => {
             variant="outlined"
             {...register("email")}
           />
-          {errors.email ? <p>{errors.email?.message}</p> : null}
+          {errors.email ? (
+            <p className="errorMessage">{errors.email?.message}</p>
+          ) : null}
           <TextField
             margin="dense"
             id="date"
@@ -86,7 +94,9 @@ const ScheduleModal = () => {
             variant="outlined"
             {...register("date")}
           />
-          {errors.date ? <p>{errors.date?.message}</p> : null}
+          {errors.date ? (
+            <p className="errorMessage">{errors.date?.message}</p>
+          ) : null}
           <TextField
             margin="dense"
             id="time"
@@ -96,7 +106,9 @@ const ScheduleModal = () => {
             variant="outlined"
             {...register("time")}
           />
-          {errors.time ? <p>{errors.time?.message}</p> : null}
+          {errors.time ? (
+            <p className="errorMessage">{errors.time?.message}</p>
+          ) : null}
           <DialogActions>
             <Button type="submit">Confirmar</Button>
             <Button onClick={closeModal}>Cancelar</Button>

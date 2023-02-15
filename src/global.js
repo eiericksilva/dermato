@@ -40,6 +40,12 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 400;
         color: #2e2e2e;
     }
+    .errorMessage {
+        font-size: 13px;
+        font-weight: 400;
+        color: #dc2428;
+        margin-left: 7px;
+    }
 
     a {
         color: #644b2c;
