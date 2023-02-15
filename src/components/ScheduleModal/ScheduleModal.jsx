@@ -42,6 +42,8 @@ const ScheduleModal = () => {
     alert(
       `Olá ${ScheduleData.first_name}, sua consulta foi agendada com sucesso!`
     );
+
+    closeModal();
   };
 
   return (
