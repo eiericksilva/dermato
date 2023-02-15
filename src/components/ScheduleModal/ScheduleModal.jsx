@@ -81,6 +81,7 @@ const ScheduleModal = () => {
             margin="dense"
             id="date"
             type="date"
+            label="Data"
             fullWidth
             variant="outlined"
             {...register("date")}
@@ -90,6 +91,7 @@ const ScheduleModal = () => {
             margin="dense"
             id="time"
             type="time"
+            label="Hora"
             fullWidth
             variant="outlined"
             {...register("time")}
