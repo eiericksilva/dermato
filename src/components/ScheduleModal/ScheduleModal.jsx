@@ -18,7 +18,7 @@ const schema = yup
       .required("Primeiro nome é obrigatório"),
     last_name: yup
       .string("Não pode haver numeros")
-      .required("Sobrenome nome é obrigatório"),
+      .required("Sobrenome é obrigatório"),
     email: yup
       .string()
       .email("Insira um email válido")
@@ -39,9 +39,7 @@ const ScheduleModal = () => {
   });
 
   const onSubmit = (ScheduleData) => {
-    alert(
-      `Olá ${ScheduleData.first_name}, sua consulta foi agendada com sucesso!`
-    );
+    alert(`Consulta agendada com sucesso!`);
 
     closeModal();
   };
